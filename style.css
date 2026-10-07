@@ -1,0 +1,3325 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+    --black: #080808;
+    --white: #f1f0eb;
+    --grey: #858585;
+    --dark-grey: #171717;
+    --accent: #b8ff00;
+
+    --pad: 6vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+::selection {
+    background: var(--accent);
+    color: var(--black);
+}
+
+
+/* =========================================
+   GLOBAL
+========================================= */
+
+.section-label {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 22px;
+    border-bottom: 1px solid rgba(241, 240, 235, .14);
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: .16em;
+    color: rgba(241, 240, 235, .4);
+}
+
+section {
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 100svh;
+    background: var(--black);
+    padding: 32px var(--pad) 28px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-top {
+    display: flex;
+    justify-content: space-between;
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: .16em;
+    color: rgba(241, 240, 235, .48);
+
+    padding-bottom: 22px;
+    border-bottom: 1px solid rgba(241, 240, 235, .14);
+}
+
+.hero-main {
+    flex: 1;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-title {
+    position: relative;
+    z-index: 3;
+}
+
+.hero-index {
+    display: block;
+    margin-bottom: 25px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: .2em;
+    color: var(--accent);
+}
+
+.hero-title h1 {
+    font-size: clamp(150px, 25vw, 420px);
+    line-height: .72;
+    letter-spacing: -.095em;
+    font-weight: 900;
+    text-transform: uppercase;
+
+    margin-left: -.04em;
+}
+
+.hero-tagline {
+    margin-top: 55px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 10px;
+    letter-spacing: .2em;
+    color: rgba(241, 240, 235, .58);
+}
+
+.hero-side {
+    position: absolute;
+    right: 0;
+    top: 50%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    transform: translateY(-50%);
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .15em;
+    text-align: right;
+
+    color: rgba(241, 240, 235, .4);
+}
+
+.hero-side span:first-child {
+    color: var(--accent);
+}
+
+.hero-footer {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 22px;
+    border-top: 1px solid rgba(241, 240, 235, .14);
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .14em;
+
+    color: rgba(241, 240, 235, .32);
+}
+
+
+/* =========================================
+   STATEMENT
+========================================= */
+
+.statement-section {
+    min-height: 100vh;
+    background: var(--white);
+    color: var(--black);
+
+    padding: 110px var(--pad) 70px;
+}
+
+.statement-section .section-label {
+    color: rgba(8, 8, 8, .45);
+    border-color: rgba(8, 8, 8, .16);
+}
+
+.statement-content {
+    min-height: calc(100vh - 220px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.statement-kicker {
+    margin-bottom: 35px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: .2em;
+
+    color: #5e6800;
+}
+
+.statement-content h2 {
+    max-width: 1200px;
+
+    font-size: clamp(65px, 9.8vw, 155px);
+    line-height: .78;
+    letter-spacing: -.065em;
+    font-weight: 800;
+}
+
+.statement-content h2 em {
+    font-style: italic;
+    color: #626b00;
+}
+
+.statement-description {
+    max-width: 390px;
+    margin: 70px 0 0 auto;
+
+    font-size: 13px;
+    line-height: 1.85;
+
+    color: rgba(8, 8, 8, .55);
+}
+
+
+/* =========================================
+   COLLECTION
+========================================= */
+/* =========================================
+   PAGE 3 — AURA COLLECTION
+========================================= */
+
+.collection-section {
+    position: relative;
+    min-height: 100vh;
+    background: var(--black);
+    color: var(--white);
+    padding: 110px var(--pad) 70px;
+    overflow: hidden;
+}
+
+
+/* ---------- SECTION LABEL ---------- */
+
+.collection-section .section-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+
+    color: rgba(241, 240, 235, .45);
+
+    border-bottom: 1px solid rgba(241, 240, 235, .12);
+    padding-bottom: 18px;
+}
+
+
+/* ---------- INTRO ---------- */
+
+.collection-intro {
+    padding: 90px 0 70px;
+
+    display: grid;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 6vw;
+
+    align-items: end;
+}
+
+.collection-intro p {
+    margin: 0;
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: .2em;
+
+    color: var(--accent);
+}
+
+.collection-intro h2 {
+    margin: 0;
+
+    font-size: clamp(58px, 8vw, 125px);
+    line-height: .78;
+
+    font-weight: 800;
+    letter-spacing: -.07em;
+
+    grid-column: 2;
+}
+
+.collection-intro h2 em {
+    color: var(--accent);
+    font-style: italic;
+}
+
+.collection-intro > span {
+    grid-column: 2;
+
+    max-width: 390px;
+
+    margin-top: 15px;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    color: rgba(241, 240, 235, .45);
+}
+
+
+/* ---------- PRODUCT GRID ---------- */
+
+.collection-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 2px;
+
+    background: rgba(241, 240, 235, .12);
+}
+
+
+/* ---------- PRODUCT CARD ---------- */
+
+.product-card {
+    position: relative;
+
+    background: #111;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+
+/* ---------- PRODUCT IMAGE ---------- */
+
+.product-image {
+    position: relative;
+
+    height: 650px;
+
+    overflow: hidden;
+
+    background: #151515;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform .8s cubic-bezier(.16, 1, .3, 1),
+        filter .5s ease;
+}
+
+
+/* ---------- IMAGE DIFFERENCES ---------- */
+
+.product-tee .product-image img {
+    object-position: center;
+}
+
+.product-hoodie .product-image img {
+    object-position: center;
+}
+
+.product-cargo .product-image img {
+    object-position: center;
+}
+
+
+/* ---------- HOVER ---------- */
+
+.product-card:hover .product-image img {
+    transform: scale(1.035);
+    filter: brightness(.88);
+}
+
+
+/* ---------- PRODUCT INDEX ---------- */
+
+.product-index {
+    position: absolute;
+
+    top: 24px;
+    left: 24px;
+
+    z-index: 3;
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .15em;
+
+    color: var(--white);
+}
+
+
+/* ---------- PRODUCT TAG ---------- */
+
+.product-tag {
+    position: absolute;
+
+    top: 24px;
+    right: 24px;
+
+    z-index: 3;
+
+    padding: 8px 11px;
+
+    border: 1px solid rgba(241, 240, 235, .3);
+
+    font-family: "DM Mono", monospace;
+    font-size: 7px;
+    letter-spacing: .12em;
+
+    color: var(--white);
+
+    background: rgba(8, 8, 8, .45);
+
+    backdrop-filter: blur(6px);
+}
+
+
+/* ---------- PRODUCT INFO ---------- */
+
+.product-info {
+    min-height: 105px;
+
+    padding: 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid rgba(241, 240, 235, .1);
+}
+
+.product-info span:first-child {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .16em;
+
+    color: rgba(241, 240, 235, .4);
+}
+
+.product-info h3 {
+    margin: 0;
+
+    font-size: clamp(20px, 2vw, 30px);
+    line-height: 1;
+
+    font-weight: 800;
+    letter-spacing: -.04em;
+}
+
+.product-arrow {
+    font-size: 25px;
+
+    color: var(--accent);
+
+    transition: transform .4s ease;
+}
+
+.product-card:hover .product-arrow {
+    transform: translate(5px, -5px);
+}
+
+
+/* =========================================
+   COMING SOON
+========================================= */
+
+.product-cap .product-image {
+    background:
+        linear-gradient(
+            135deg,
+            #111 0%,
+            #181818 50%,
+            #101010 100%
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coming-soon-mark {
+    text-align: center;
+
+    transform: rotate(-4deg);
+}
+
+.coming-soon-mark span {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: .2em;
+
+    color: var(--accent);
+}
+
+.coming-soon-mark strong {
+    display: block;
+
+    font-size: clamp(55px, 7vw, 105px);
+    line-height: .78;
+
+    letter-spacing: -.08em;
+    font-weight: 900;
+
+    color: var(--white);
+}
+
+
+/* ---------- BOTTOM LINE ---------- */
+
+.collection-bottom {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 22px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .15em;
+
+    color: rgba(241, 240, 235, .3);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .collection-intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .collection-intro h2,
+    .collection-intro > span {
+        grid-column: 1;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product-image {
+        height: 520px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .collection-section {
+        padding: 80px 5vw 50px;
+    }
+
+    .collection-intro {
+        padding: 65px 0 50px;
+    }
+
+    .collection-intro h2 {
+        font-size: clamp(52px, 16vw, 85px);
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        height: 560px;
+    }
+
+    .product-info {
+        min-height: 95px;
+        padding: 20px;
+    }
+
+    .collection-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+
+    .product-image {
+        height: 470px;
+    }
+
+    .product-index,
+    .product-tag {
+        top: 16px;
+    }
+
+    .product-index {
+        left: 16px;
+    }
+
+    .product-tag {
+        right: 16px;
+    }
+
+}
+
+/* =========================================
+   IDENTITY
+========================================= */
+/* =========================================
+   PAGE 4 — AURA IDENTITY
+========================================= */
+
+.identity-section {
+    position: relative;
+    min-height: 100vh;
+
+    background: #111111;
+    color: var(--white);
+
+    padding: 110px var(--pad) 60px;
+
+    overflow: hidden;
+}
+
+.identity-section .section-label {
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding-bottom: 22px;
+
+    border-bottom: 1px solid rgba(241, 240, 235, .14);
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: .16em;
+
+    color: rgba(241, 240, 235, .4);
+}
+
+
+/* =========================================
+   MAIN IDENTITY LAYOUT
+========================================= */
+
+.identity-content {
+    width: 100%;
+    min-height: 750px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(360px, .85fr);
+
+    align-items: center;
+
+    gap: 6vw;
+
+    padding: 80px 0 40px;
+}
+
+
+/* =========================================
+   AURA WORDMARK
+========================================= */
+
+.identity-mark {
+    position: relative;
+
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    align-items: center;
+
+    overflow: visible;
+
+    font-size: clamp(150px, 20vw, 330px);
+    line-height: .7;
+
+    font-weight: 900;
+
+    letter-spacing: -.105em;
+
+    color: var(--accent);
+
+    white-space: nowrap;
+}
+
+.identity-mark span {
+    display: block;
+}
+
+.identity-mark span:first-child {
+    margin-right: -.04em;
+}
+
+.identity-mark span:last-child {
+    margin-left: -.055em;
+}
+
+
+/* little technical label */
+
+.identity-mark::after {
+    content: "AURA / VISUAL IDENTITY";
+
+    position: absolute;
+
+    left: 5px;
+    bottom: -55px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    line-height: 1;
+
+    letter-spacing: .16em;
+
+    color: rgba(241, 240, 235, .3);
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   IDENTITY COPY
+========================================= */
+
+.identity-copy {
+    width: 100%;
+    min-width: 0;
+    max-width: 520px;
+
+    justify-self: end;
+}
+
+.identity-copy > p:first-child {
+    margin: 0 0 28px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    line-height: 1;
+
+    letter-spacing: .2em;
+
+    color: var(--accent);
+}
+
+.identity-copy h2 {
+    margin: 0;
+
+    max-width: 100%;
+
+    font-size: clamp(72px, 8vw, 130px);
+    line-height: .72;
+
+    font-weight: 800;
+
+    letter-spacing: -.065em;
+
+    white-space: normal;
+
+    overflow-wrap: normal;
+}
+
+.identity-copy h2 em {
+    color: var(--accent);
+    font-style: italic;
+}
+
+.identity-copy > p:last-child {
+    max-width: 340px;
+
+    margin: 55px 0 0;
+
+    font-size: 13px;
+    line-height: 1.85;
+
+    color: rgba(241, 240, 235, .45);
+}
+
+
+/* =========================================
+   IDENTITY DETAILS
+========================================= */
+
+.identity-copy::after {
+    content: "TYPE / SCALE / CONTRAST / ATTITUDE";
+
+    display: block;
+
+    margin-top: 55px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .14em;
+
+    color: rgba(241, 240, 235, .22);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .identity-content {
+        grid-template-columns: minmax(0, 1fr) minmax(300px, .8fr);
+
+        gap: 5vw;
+    }
+
+    .identity-mark {
+        font-size: clamp(130px, 18vw, 250px);
+    }
+
+    .identity-copy h2 {
+        font-size: clamp(65px, 7.5vw, 105px);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+    .identity-section {
+        min-height: auto;
+
+        padding: 85px var(--pad) 60px;
+    }
+
+    .identity-content {
+        min-height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 110px;
+
+        padding: 80px 0 35px;
+    }
+
+    .identity-mark {
+        width: 100%;
+
+        font-size: clamp(100px, 27vw, 165px);
+
+        line-height: .7;
+
+        letter-spacing: -.1em;
+
+        overflow: visible;
+    }
+
+    .identity-mark::after {
+        bottom: -35px;
+    }
+
+    .identity-copy {
+        width: 100%;
+        max-width: 100%;
+
+        justify-self: auto;
+    }
+
+    .identity-copy h2 {
+        width: 100%;
+        max-width: 100%;
+
+        font-size: clamp(65px, 18vw, 105px);
+
+        line-height: .74;
+
+        letter-spacing: -.06em;
+
+        white-space: normal;
+    }
+
+    .identity-copy > p:last-child {
+        max-width: 310px;
+
+        margin-top: 42px;
+    }
+
+    .identity-copy::after {
+        margin-top: 42px;
+
+        line-height: 1.7;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 420px) {
+
+    .identity-section {
+        padding: 75px 6vw 50px;
+    }
+
+    .identity-content {
+        gap: 95px;
+
+        padding-top: 70px;
+    }
+
+    .identity-mark {
+        font-size: 25vw;
+    }
+
+    .identity-copy h2 {
+        font-size: 18vw;
+    }
+
+    .identity-copy > p:last-child {
+        font-size: 12px;
+    }
+}
+
+/* =========================================
+   CAMPAIGN
+========================================= */
+/* =========================
+   CAMPAIGN
+========================= */
+
+.campaign-section {
+    position: relative;
+    min-height: 100vh;
+    background: #080808;
+    color: var(--white);
+    padding: 110px var(--pad) 70px;
+    overflow: hidden;
+}
+
+.campaign-section .section-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 22px;
+    border-bottom: 1px solid rgba(241,240,235,.12);
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+
+    color: rgba(241,240,235,.45);
+}
+
+
+/* MAIN LAYOUT */
+
+.campaign-layout {
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+
+    min-height: 760px;
+
+    padding: 75px 0 55px;
+
+    gap: 7vw;
+
+    align-items: center;
+}
+
+
+/* LEFT COPY */
+
+.campaign-copy {
+    position: relative;
+    z-index: 2;
+
+    align-self: center;
+}
+
+.campaign-kicker {
+    display: flex;
+    gap: 28px;
+
+    margin-bottom: 55px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+
+    color: rgba(241,240,235,.45);
+}
+
+.campaign-kicker span:first-child {
+    color: var(--accent);
+}
+
+
+.campaign-copy h2 {
+    margin: 0;
+
+    font-size: clamp(90px, 11vw, 175px);
+    line-height: .76;
+
+    font-weight: 900;
+
+    letter-spacing: -.09em;
+    text-transform: uppercase;
+}
+
+.campaign-copy h2 em {
+    color: var(--accent);
+    font-style: italic;
+}
+
+
+.campaign-copy > p {
+    max-width: 310px;
+
+    margin-top: 55px;
+
+    font-size: 12px;
+    line-height: 1.8;
+
+    color: rgba(241,240,235,.48);
+}
+
+
+.campaign-meta {
+    display: flex;
+    gap: 25px;
+
+    margin-top: 55px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .14em;
+
+    color: rgba(241,240,235,.32);
+}
+
+
+/* PHOTO AREA */
+
+.campaign-photo-wrap {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.campaign-photo {
+    position: relative;
+
+    width: min(100%, 620px);
+
+    background: #151515;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(241,240,235,.1);
+}
+
+
+/* ACTUAL IMAGE */
+
+.campaign-photo img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 5 / 4;
+
+    object-fit: cover;
+
+    filter: none;
+
+    transform: none;
+
+    transition:
+        transform .8s cubic-bezier(.16,1,.3,1),
+        filter .5s ease;
+}
+
+
+.campaign-photo:hover img {
+    transform: scale(1.015);
+}
+
+
+/* PHOTO DETAILS */
+
+.photo-number {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .18em;
+
+    color: rgba(241,240,235,.7);
+
+    z-index: 3;
+}
+
+
+.photo-label {
+    position: absolute;
+
+    right: 18px;
+    bottom: 18px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .18em;
+
+    color: var(--accent);
+
+    z-index: 3;
+}
+
+
+/* SIDE STATEMENT */
+
+.campaign-side-text {
+    position: absolute;
+
+    right: -38px;
+    top: 50%;
+
+    transform: translateY(-50%) rotate(90deg);
+
+    transform-origin: center;
+
+    white-space: nowrap;
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .2em;
+
+    color: rgba(241,240,235,.25);
+}
+
+
+/* FOOTER */
+
+.campaign-footer {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(241,240,235,.1);
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .15em;
+
+    color: rgba(241,240,235,.3);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+    .campaign-layout {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        gap: 65px;
+
+        padding-top: 60px;
+    }
+
+    .campaign-copy h2 {
+        font-size: clamp(80px, 16vw, 145px);
+    }
+
+    .campaign-photo-wrap {
+        justify-content: flex-start;
+    }
+
+    .campaign-photo {
+        width: min(100%, 650px);
+    }
+
+    .campaign-side-text {
+        right: -25px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .campaign-section {
+        padding: 80px 5vw 50px;
+    }
+
+    .campaign-layout {
+        padding: 50px 0 45px;
+
+        gap: 50px;
+    }
+
+    .campaign-kicker {
+        margin-bottom: 40px;
+        gap: 18px;
+    }
+
+    .campaign-copy h2 {
+        font-size: clamp(70px, 20vw, 115px);
+    }
+
+    .campaign-copy > p {
+        margin-top: 40px;
+    }
+
+    .campaign-meta {
+        flex-wrap: wrap;
+        margin-top: 40px;
+        gap: 12px 20px;
+    }
+
+    .campaign-photo {
+        width: 100%;
+    }
+
+    .campaign-side-text {
+        display: none;
+    }
+
+    .campaign-footer {
+        flex-direction: column;
+        gap: 12px;
+        line-height: 1.6;
+    }
+}
+
+/* =========================================
+   LOOKBOOK
+========================================= */
+/* =========================================
+   PAGE 6 — LOOKBOOK
+========================================= */
+
+.lookbook-section {
+    position: relative;
+    min-height: 100vh;
+    background: var(--black);
+    color: var(--white);
+    padding: 110px var(--pad) 70px;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   SECTION LABEL
+========================================= */
+
+.lookbook-section .section-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 22px;
+
+    border-bottom: 1px solid rgba(241, 240, 235, .14);
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+
+    color: rgba(241, 240, 235, .4);
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.lookbook-intro {
+    display: grid;
+
+    grid-template-columns: 1.2fr .8fr;
+
+    align-items: end;
+
+    gap: 7vw;
+
+    padding: 80px 0 90px;
+}
+
+.lookbook-intro p {
+    margin: 0 0 28px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+
+    color: var(--accent);
+}
+
+.lookbook-intro h2 {
+    margin: 0;
+
+    font-size: clamp(90px, 12vw, 180px);
+
+    line-height: .72;
+
+    font-weight: 900;
+
+    letter-spacing: -.09em;
+
+    text-transform: uppercase;
+}
+
+.lookbook-intro h2 em {
+    color: var(--accent);
+    font-style: italic;
+}
+
+.lookbook-intro > span {
+    max-width: 300px;
+
+    padding-bottom: 8px;
+
+    font-size: 12px;
+    line-height: 1.8;
+
+    color: rgba(241, 240, 235, .4);
+}
+
+
+/* =========================================
+   LOOKBOOK GRID
+========================================= */
+
+.lookbook-grid {
+    display: grid;
+
+    grid-template-columns: 1.15fr .85fr;
+
+    grid-template-rows: auto auto;
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   IMAGE ITEMS
+========================================= */
+
+.lookbook-item {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #111;
+}
+
+.lookbook-large {
+    grid-row: span 2;
+
+    min-height: 820px;
+}
+
+.lookbook-small,
+.lookbook-cargo {
+    min-height: 400px;
+}
+
+.lookbook-item img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform .8s cubic-bezier(.16, 1, .3, 1);
+}
+
+.lookbook-item:hover img {
+    transform: scale(1.025);
+}
+
+
+/* =========================================
+   IMAGE NUMBER
+========================================= */
+
+.lookbook-number {
+    position: absolute;
+
+    top: 20px;
+    left: 20px;
+
+    z-index: 3;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: .18em;
+
+    color: rgba(241, 240, 235, .7);
+}
+
+
+/* =========================================
+   IMAGE CAPTION
+========================================= */
+
+.lookbook-caption {
+    position: absolute;
+
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+
+    z-index: 3;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.lookbook-caption::before {
+    content: "";
+
+    position: absolute;
+
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+
+    height: 100px;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, .72)
+        );
+
+    z-index: -1;
+}
+
+.lookbook-caption span {
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: .16em;
+
+    color: rgba(241, 240, 235, .55);
+}
+
+.lookbook-caption strong {
+    font-size: 13px;
+
+    letter-spacing: -.01em;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   STATEMENT BLOCK
+========================================= */
+
+.lookbook-statement {
+    min-height: 400px;
+
+    padding: 50px 45px;
+
+    background: var(--accent);
+
+    color: var(--black);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.lookbook-statement > span {
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+}
+
+.lookbook-statement h3 {
+    margin: 35px 0 20px;
+
+    font-size: clamp(45px, 5vw, 75px);
+
+    line-height: .82;
+
+    letter-spacing: -.06em;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+}
+
+.lookbook-statement h3 em {
+    font-style: italic;
+}
+
+.lookbook-statement p {
+    max-width: 230px;
+
+    margin: 0;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+
+    opacity: .65;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.lookbook-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 22px;
+
+    margin-top: 20px;
+
+    border-top: 1px solid rgba(241, 240, 235, .1);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: .15em;
+
+    color: rgba(241, 240, 235, .3);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .lookbook-intro {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .lookbook-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .lookbook-large {
+        grid-column: span 2;
+
+        grid-row: auto;
+
+        min-height: 650px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .lookbook-section {
+        padding: 80px 5vw 50px;
+    }
+
+    .lookbook-intro {
+        padding: 55px 0 60px;
+    }
+
+    .lookbook-intro h2 {
+        font-size: clamp(75px, 20vw, 115px);
+    }
+
+    .lookbook-grid {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 14px;
+    }
+
+    .lookbook-large {
+        min-height: 550px;
+    }
+
+    .lookbook-small,
+    .lookbook-cargo {
+        min-height: 400px;
+    }
+
+    .lookbook-statement {
+        min-height: 360px;
+
+        padding: 35px 25px;
+    }
+
+    .lookbook-footer {
+        flex-direction: column;
+
+        gap: 12px;
+
+        line-height: 1.6;
+    }
+}
+/* =========================================
+   PAGE 7 — DIGITAL EXPERIENCE
+========================================= */
+
+.digital-section {
+    position: relative;
+
+    min-height: 100vh;
+
+    background: #111111;
+
+    color: var(--white);
+
+    padding: 110px var(--pad) 80px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   SECTION LABEL
+========================================= */
+
+.digital-section .section-label {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 22px;
+
+    border-bottom: 1px solid rgba(241, 240, 235, .14);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: .16em;
+
+    text-transform: uppercase;
+
+    color: rgba(241, 240, 235, .4);
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.digital-intro {
+    display: grid;
+
+    grid-template-columns: 1.15fr .85fr;
+
+    align-items: end;
+
+    gap: 7vw;
+
+    padding: 80px 0 75px;
+}
+
+.digital-intro p {
+    margin: 0 0 28px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+
+    color: var(--accent);
+}
+
+.digital-intro h2 {
+    margin: 0;
+
+    font-size: clamp(75px, 10vw, 155px);
+
+    line-height: .73;
+
+    font-weight: 900;
+
+    letter-spacing: -.09em;
+
+    text-transform: uppercase;
+}
+
+.digital-intro h2 em {
+    color: var(--accent);
+
+    font-style: italic;
+}
+
+.digital-intro > span {
+    max-width: 320px;
+
+    padding-bottom: 8px;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color: rgba(241, 240, 235, .4);
+}
+
+
+/* =========================================
+   DIGITAL BROWSER
+========================================= */
+
+.digital-browser {
+    position: relative;
+
+    width: 100%;
+
+    background: #080808;
+
+    border: 1px solid rgba(241, 240, 235, .14);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, .35);
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   BROWSER TOP
+========================================= */
+
+.browser-top {
+    height: 42px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    align-items: center;
+
+    padding: 0 18px;
+
+    border-bottom: 1px solid rgba(241, 240, 235, .1);
+
+    background: #0d0d0d;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 7px;
+
+    letter-spacing: .15em;
+
+    text-transform: uppercase;
+
+    color: rgba(241, 240, 235, .3);
+}
+
+.browser-dots {
+    display: flex;
+
+    gap: 6px;
+}
+
+.browser-dots span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: rgba(241, 240, 235, .22);
+}
+
+.browser-url {
+    text-align: center;
+}
+
+.browser-status {
+    text-align: right;
+
+    color: var(--accent);
+}
+
+
+/* =========================================
+   STORE HEADER
+========================================= */
+
+.store-header {
+    height: 72px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 2fr 1fr;
+
+    align-items: center;
+
+    padding: 0 30px;
+
+    border-bottom: 1px solid rgba(241, 240, 235, .1);
+}
+
+.store-logo {
+    font-size: 24px;
+
+    font-weight: 900;
+
+    letter-spacing: -.08em;
+}
+
+.store-nav {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 35px;
+}
+
+.store-nav a,
+.store-cart {
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: .15em;
+
+    text-transform: uppercase;
+
+    color: rgba(241, 240, 235, .6);
+
+    text-decoration: none;
+
+    transition: color .3s ease;
+}
+
+.store-nav a:hover {
+    color: var(--accent);
+}
+
+.store-cart {
+    text-align: right;
+}
+
+.store-cart span {
+    color: var(--accent);
+
+    margin-left: 5px;
+}
+
+
+/* =========================================
+   STORE HERO
+========================================= */
+
+.store-hero {
+    display: grid;
+
+    grid-template-columns: .85fr 1.15fr;
+
+    min-height: 570px;
+}
+
+
+/* =========================================
+   STORE HERO COPY
+========================================= */
+
+.store-hero-copy {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 70px;
+
+    background: #080808;
+}
+
+.store-kicker {
+    margin-bottom: 35px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: .18em;
+
+    color: var(--accent);
+}
+
+.store-hero-copy h3 {
+    margin: 0;
+
+    font-size: clamp(70px, 8vw, 125px);
+
+    line-height: .72;
+
+    font-weight: 900;
+
+    letter-spacing: -.09em;
+
+    text-transform: uppercase;
+}
+
+.store-hero-copy h3 em {
+    color: var(--accent);
+
+    font-style: italic;
+}
+
+
+/* =========================================
+   STORE BUTTON
+========================================= */
+
+.store-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 190px;
+
+    margin-top: 55px;
+
+    padding: 15px 17px;
+
+    border: 1px solid rgba(241, 240, 235, .25);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: .13em;
+
+    color: var(--white);
+
+    text-decoration: none;
+
+    text-transform: uppercase;
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease;
+}
+
+.store-button span {
+    font-size: 14px;
+}
+
+.store-button:hover {
+    background: var(--accent);
+
+    color: var(--black);
+
+    border-color: var(--accent);
+}
+
+
+/* =========================================
+   STORE HERO IMAGE
+========================================= */
+
+.store-hero-image {
+    position: relative;
+
+    min-height: 570px;
+
+    overflow: hidden;
+
+    background: #151515;
+}
+
+.store-hero-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: contrast(1.05);
+
+    transition:
+        transform 1s cubic-bezier(.16, 1, .3, 1);
+}
+
+.digital-browser:hover .store-hero-image img {
+    transform: scale(1.025);
+}
+
+.store-image-label {
+    position: absolute;
+
+    right: 20px;
+    bottom: 20px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: .16em;
+
+    color: var(--accent);
+}
+
+
+/* =========================================
+   STORE PRODUCTS
+========================================= */
+
+.store-products {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    border-top: 1px solid rgba(241, 240, 235, .1);
+}
+
+.store-product {
+    display: grid;
+
+    grid-template-columns: 35px 1fr auto;
+
+    align-items: center;
+
+    gap: 15px;
+
+    min-height: 85px;
+
+    padding: 0 25px;
+
+    border-right: 1px solid rgba(241, 240, 235, .1);
+
+    transition:
+        background .3s ease;
+}
+
+.store-product:last-child {
+    border-right: 0;
+}
+
+.store-product:hover {
+    background: #151515;
+}
+
+.store-product > span {
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    color: var(--accent);
+}
+
+.store-product strong {
+    font-size: 10px;
+
+    letter-spacing: .02em;
+}
+
+.store-product small {
+    font-family: "DM Mono", monospace;
+
+    font-size: 7px;
+
+    letter-spacing: .1em;
+
+    color: rgba(241, 240, 235, .3);
+}
+
+
+/* =========================================
+   DIGITAL BOTTOM
+========================================= */
+
+.digital-bottom {
+    display: grid;
+
+    grid-template-columns: 1.15fr .85fr;
+
+    gap: 8vw;
+
+    padding: 100px 0 80px;
+
+    align-items: end;
+}
+
+.digital-statement > span {
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+
+    color: var(--accent);
+}
+
+.digital-statement h3 {
+    margin: 30px 0 0;
+
+    font-size: clamp(50px, 6vw, 90px);
+
+    line-height: .8;
+
+    font-weight: 900;
+
+    letter-spacing: -.07em;
+
+    text-transform: uppercase;
+}
+
+.digital-statement h3 em {
+    color: var(--accent);
+
+    font-style: italic;
+}
+
+.digital-copy {
+    max-width: 340px;
+}
+
+.digital-copy p {
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+
+    color: rgba(241, 240, 235, .42);
+}
+
+.digital-meta {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px 22px;
+
+    margin-top: 35px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 7px;
+
+    letter-spacing: .14em;
+
+    color: rgba(241, 240, 235, .3);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.digital-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(241, 240, 235, .1);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: .15em;
+
+    color: rgba(241, 240, 235, .3);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .digital-intro {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .store-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .store-hero-image {
+        min-height: 500px;
+    }
+
+    .digital-bottom {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .digital-section {
+        padding: 80px 5vw 50px;
+    }
+
+    .digital-intro {
+        padding: 55px 0 60px;
+    }
+
+    .digital-intro h2 {
+        font-size: clamp(65px, 18vw, 105px);
+    }
+
+    .browser-top {
+        grid-template-columns: 1fr 1fr;
+
+        padding: 0 12px;
+    }
+
+    .browser-url {
+        display: none;
+    }
+
+    .browser-status {
+        text-align: right;
+    }
+
+    .store-header {
+        height: 60px;
+
+        grid-template-columns: 1fr 1fr;
+
+        padding: 0 18px;
+    }
+
+    .store-logo {
+        font-size: 20px;
+    }
+
+    .store-nav {
+        display: none;
+    }
+
+    .store-cart {
+        text-align: right;
+    }
+
+    .store-hero-copy {
+        padding: 55px 25px;
+    }
+
+    .store-hero-copy h3 {
+        font-size: clamp(65px, 19vw, 105px);
+    }
+
+    .store-hero-image {
+        min-height: 430px;
+    }
+
+    .store-products {
+        grid-template-columns: 1fr;
+    }
+
+    .store-product {
+        min-height: 70px;
+
+        border-right: 0;
+
+        border-bottom: 1px solid rgba(241, 240, 235, .1);
+    }
+
+    .store-product:last-child {
+        border-bottom: 0;
+    }
+
+    .digital-bottom {
+        padding: 75px 0 60px;
+    }
+
+    .digital-statement h3 {
+        font-size: clamp(45px, 12vw, 70px);
+    }
+
+    .digital-footer {
+        flex-direction: column;
+
+        gap: 12px;
+
+        line-height: 1.6;
+    }
+}
+
+/* =========================================
+   DIGITAL
+========================================= */
+
+.digital-section {
+    min-height: 100vh;
+
+    background: #151515;
+    color: var(--white);
+
+    padding: 110px var(--pad) 60px;
+}
+
+.digital-content {
+    display: grid;
+    grid-template-columns: 1fr .65fr;
+    gap: 8vw;
+    align-items: end;
+
+    margin: 100px 0 80px;
+}
+
+.digital-content > div:first-child > p {
+    margin-bottom: 25px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: .2em;
+
+    color: var(--accent);
+}
+
+.digital-content h2 {
+    font-size: clamp(90px, 11vw, 175px);
+    line-height: .7;
+    letter-spacing: -.075em;
+    font-weight: 800;
+}
+
+.digital-content h2 em {
+    color: var(--accent);
+    font-style: italic;
+}
+
+.digital-copy {
+    padding-bottom: 10px;
+}
+
+.digital-copy p {
+    max-width: 330px;
+
+    font-size: 13px;
+    line-height: 1.85;
+
+    color: rgba(241,240,235,.48);
+}
+
+.digital-copy span {
+    display: block;
+
+    margin-top: 40px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .13em;
+
+    color: rgba(241,240,235,.25);
+}
+
+.digital-screen {
+    height: 650px;
+
+    border: 1px solid rgba(241,240,235,.12);
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #0b0b0b;
+}
+
+.digital-screen::before,
+.digital-screen::after {
+    content: "";
+
+    position: absolute;
+
+    background: var(--accent);
+}
+
+.digital-screen::before {
+    width: 1px;
+    height: 100%;
+    left: 50%;
+    opacity: .12;
+}
+
+.digital-screen::after {
+    height: 1px;
+    width: 100%;
+    top: 50%;
+    opacity: .12;
+}
+
+.digital-screen span {
+    position: relative;
+    z-index: 2;
+
+    font-size: clamp(100px, 20vw, 300px);
+    font-weight: 900;
+    letter-spacing: -.11em;
+
+    color: var(--white);
+}
+
+
+/* =========================================
+   CLOSING
+========================================= */
+
+.closing-section {
+    min-height: 100vh;
+
+    background: var(--accent);
+    color: var(--black);
+
+    padding: 45px var(--pad) 35px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.closing-section .section-label {
+    color: rgba(8,8,8,.48);
+    border-color: rgba(8,8,8,.18);
+}
+
+.closing-content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.closing-content > p {
+    margin-bottom: 35px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: .2em;
+
+    color: rgba(8,8,8,.48);
+}
+
+.closing-content h2 {
+    font-size: clamp(90px, 13vw, 200px);
+    line-height: .68;
+    letter-spacing: -.09em;
+    font-weight: 900;
+}
+
+.closing-content h2 em {
+    font-style: italic;
+}
+
+.closing-content > span {
+    margin-top: 60px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .18em;
+
+    color: rgba(8,8,8,.45);
+}
+
+.closing-footer {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(8,8,8,.18);
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .14em;
+
+    color: rgba(8,8,8,.4);
+
+}
+
+/* =========================================
+   PAGE 8 — CLOSING
+========================================= */
+
+.closing-section {
+    position: relative;
+
+    min-height: 100vh;
+
+    background: var(--black);
+
+    color: var(--white);
+
+    padding: 110px var(--pad) 60px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* =========================================
+   SECTION LABEL
+========================================= */
+
+.closing-section .section-label {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 22px;
+
+    border-bottom: 1px solid rgba(241, 240, 235, .14);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: .16em;
+
+    text-transform: uppercase;
+
+    color: rgba(241, 240, 235, .4);
+
+    position: relative;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.closing-main {
+    position: relative;
+
+    flex: 1;
+
+    min-height: 700px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 80px 0;
+}
+
+
+/* =========================================
+   KICKER
+========================================= */
+
+.closing-kicker {
+    position: relative;
+
+    z-index: 3;
+
+    margin-bottom: 40px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: .18em;
+
+    text-transform: uppercase;
+
+    color: var(--accent);
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.closing-title {
+    position: relative;
+
+    z-index: 3;
+
+    margin: 0;
+
+    font-size: clamp(85px, 13vw, 205px);
+
+    line-height: .72;
+
+    font-weight: 900;
+
+    letter-spacing: -.105em;
+
+    text-transform: uppercase;
+}
+
+.closing-title span {
+    color: var(--accent);
+}
+
+.closing-title em {
+    font-style: italic;
+
+    color: var(--white);
+}
+
+
+/* =========================================
+   SIDE COPY
+========================================= */
+
+.closing-side {
+    position: absolute;
+
+    right: 4vw;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 4;
+
+    width: 180px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+.closing-number {
+    font-family: "DM Mono", monospace;
+
+    font-size: 9px;
+
+    letter-spacing: .18em;
+
+    color: var(--accent);
+}
+
+.closing-side p {
+    margin: 0;
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    color: rgba(241, 240, 235, .38);
+}
+
+
+/* =========================================
+   GIANT BACKGROUND MARK
+========================================= */
+
+.closing-mark {
+    position: absolute;
+
+    right: -2vw;
+
+    bottom: -8vw;
+
+    z-index: 1;
+
+    font-size: clamp(260px, 35vw, 600px);
+
+    line-height: .7;
+
+    font-weight: 900;
+
+    letter-spacing: -.12em;
+
+    color: rgba(241, 240, 235, .025);
+
+    user-select: none;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   DECORATIVE LINE
+========================================= */
+
+.closing-main::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    top: 50%;
+
+    height: 1px;
+
+    background: rgba(241, 240, 235, .06);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.closing-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(241, 240, 235, .1);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 8px;
+
+    letter-spacing: .15em;
+
+    color: rgba(241, 240, 235, .3);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .closing-title {
+        font-size: clamp(75px, 14vw, 150px);
+    }
+
+    .closing-side {
+        right: 0;
+
+        width: 150px;
+    }
+
+    .closing-mark {
+        right: -5vw;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .closing-section {
+        padding: 80px 5vw 50px;
+    }
+
+    .closing-main {
+        min-height: 650px;
+
+        padding: 65px 0;
+    }
+
+    .closing-kicker {
+        margin-bottom: 30px;
+    }
+
+    .closing-title {
+        font-size: clamp(65px, 18vw, 105px);
+
+        line-height: .76;
+    }
+
+    .closing-side {
+        position: relative;
+
+        top: auto;
+        right: auto;
+
+        transform: none;
+
+        width: 100%;
+
+        margin-top: 55px;
+
+        flex-direction: row;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    .closing-side p {
+        max-width: 180px;
+    }
+
+    .closing-mark {
+        right: -8vw;
+
+        bottom: 5vw;
+
+        font-size: 55vw;
+    }
+
+    .closing-main::before {
+        top: 42%;
+    }
+
+    .closing-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+
+        line-height: 1.6;
+    }
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.contact-section {
+    min-height: 100vh;
+
+    background: var(--black);
+    color: var(--white);
+
+    padding: 110px var(--pad) 45px;
+}
+
+.contact-content {
+    min-height: 700px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-content h2 {
+    font-size: clamp(110px, 17vw, 260px);
+    line-height: .65;
+    letter-spacing: -.1em;
+    font-weight: 900;
+}
+
+.contact-content h2 em {
+    color: var(--accent);
+    font-style: italic;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+
+    width: max-content;
+
+    margin: 90px 0 0 auto;
+}
+
+.contact-links a {
+    padding: 18px 0;
+
+    border-bottom: 1px solid rgba(241,240,235,.14);
+
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: .16em;
+
+    color: rgba(241,240,235,.65);
+
+    transition:
+        color .3s ease,
+        padding-left .3s ease;
+}
+
+.contact-links a:hover {
+    color: var(--accent);
+    padding-left: 15px;
+}
+
+.contact-footer {
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(241,240,235,.14);
+
+    font-family: "DM Mono", monospace;
+    font-size: 8px;
+    letter-spacing: .14em;
+
+    color: rgba(241,240,235,.3);
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+
+    :root {
+        --pad: 6vw;
+    }
+
+    .hero {
+        min-height: 100svh;
+        padding: 25px var(--pad) 22px;
+    }
+
+    .hero-main {
+        min-height: 700px;
+    }
+
+    .hero-title h1 {
+        font-size: clamp(100px, 29vw, 180px);
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        position: absolute;
+        top: 55%;
+        left: 0;
+    }
+
+    .hero-index {
+        position: absolute;
+        top: 25%;
+    }
+
+    .hero-tagline {
+        position: absolute;
+        top: 68%;
+        margin-top: 0;
+    }
+
+    .hero-side {
+        right: 0;
+        top: 25%;
+    }
+
+    .hero-footer {
+        gap: 20px;
+        line-height: 1.6;
+    }
+
+
+    /* Statement */
+
+    .statement-section {
+        min-height: auto;
+        padding: 85px var(--pad) 60px;
+    }
+
+    .statement-content {
+        min-height: 700px;
+    }
+
+    .statement-content h2 {
+        font-size: clamp(58px, 15vw, 100px);
+    }
+
+    .statement-description {
+        margin: 55px 0 0;
+        max-width: 320px;
+    }
+
+
+    /* Collection */
+
+    .collection-section {
+        padding: 85px var(--pad) 50px;
+    }
+
+    .collection-heading {
+        display: block;
+        margin: 75px 0 60px;
+    }
+
+    .collection-heading h2 {
+        font-size: clamp(75px, 21vw, 115px);
+    }
+
+    .collection-heading > span {
+        display: block;
+        margin-top: 45px;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .product-image {
+        height: 520px;
+    }
+
+
+    /* Identity */
+
+    .identity-section {
+        min-height: auto;
+        padding: 85px var(--pad) 60px;
+    }
+
+    .identity-content {
+        min-height: 750px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: flex-start;
+        justify-content: center;
+
+        gap: 120px;
+    }
+
+    .identity-mark {
+        font-size: clamp(110px, 29vw, 170px);
+    }
+
+    .identity-copy h2 {
+        font-size: clamp(75px, 20vw, 110px);
+    }
+
+    .identity-copy > p:last-child {
+        margin-top: 40px;
+    }
+
+
+    /* Campaign */
+
+    .campaign-section {
+        min-height: auto;
+        padding: 85px var(--pad) 60px;
+    }
+
+    .campaign-content {
+        min-height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: stretch;
+
+        margin-top: 60px;
+    }
+
+    .campaign-image {
+        height: 560px;
+    }
+
+    .campaign-copy {
+        padding: 70px 0 40px;
+    }
+
+    .campaign-copy h2 {
+        font-size: clamp(80px, 22vw, 120px);
+    }
+
+
+    /* Lookbook */
+
+    .lookbook-section {
+        padding: 85px var(--pad) 55px;
+    }
+
+    .lookbook-heading {
+        margin: 75px 0 60px;
+    }
+
+    .lookbook-heading h2 {
+        font-size: clamp(75px, 20vw, 110px);
+    }
+
+    .lookbook-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .lookbook-card,
+    .lookbook-card:nth-child(2) {
+        height: 500px;
+    }
+
+
+    /* Digital */
+
+    .digital-section {
+        min-height: auto;
+        padding: 85px var(--pad) 55px;
+    }
+
+    .digital-content {
+        display: block;
+        margin: 75px 0 55px;
+    }
+
+    .digital-content h2 {
+        font-size: clamp(80px, 21vw, 115px);
+    }
+
+    .digital-copy {
+        margin-top: 55px;
+    }
+
+    .digital-screen {
+        height: 500px;
+    }
+
+    .digital-screen span {
+        font-size: 25vw;
+    }
+
+
+    /* Closing */
+
+    .closing-section {
+        min-height: 100svh;
+        padding: 30px var(--pad) 25px;
+    }
+
+    .closing-content {
+        padding: 60px 0;
+    }
+
+    .closing-content h2 {
+        font-size: clamp(65px, 18vw, 105px);
+    }
+
+    .closing-content > span {
+        margin-top: 45px;
+    }
+
+    .closing-footer {
+        gap: 20px;
+        line-height: 1.6;
+    }
+
+
+    /* Contact */
+
+    .contact-section {
+        min-height: 100svh;
+        padding: 85px var(--pad) 40px;
+    }
+
+    .contact-content {
+        min-height: 700px;
+    }
+
+    .contact-content h2 {
+        font-size: clamp(90px, 25vw, 145px);
+    }
+
+    .contact-links {
+        width: 100%;
+        margin: 70px 0 0;
+    }
+
+    .contact-footer {
+        gap: 20px;
+        line-height: 1.6;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
+@media (max-width: 420px) {
+
+    .hero-title h1 {
+        font-size: 105px;
+    }
+
+    .hero-main {
+        min-height: 650px;
+    }
+
+    .product-image {
+        height: 450px;
+    }
+
+    .campaign-image {
+        height: 480px;
+    }
+
+    .digital-screen {
+        height: 420px;
+    }
+
+    .contact-content {
+        min-height: 650px;
+    }
+}
